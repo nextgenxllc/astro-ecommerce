@@ -1,0 +1,17 @@
+---
+// import type { Product } from '../types/products.types';
+const { title, price, image, rating, id, description } = Astro.props;
+---
+
+<div>
+    <img class="w-72 h-72 object-contain" src={image} alt={title} />
+    <span>
+        {title}
+    </span>
+    <div>${price}</div>
+    <div>{description}</div>
+    <div>
+        ⭐️ {rating.rate} ({rating.count})
+    </div>
+</div>
+

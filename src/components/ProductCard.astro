@@ -1,11 +1,13 @@
 ---
 // import type { Product } from '../types/products.types';
-const { title, price, image, rating } = Astro.props;
+const { title, price, image, rating, id } = Astro.props;
 ---
 
 <div>
     <img class="w-36 h-36 object-contain" src={image} alt={title} />
-	<div>{title}</div>
+    <a href={`/product/${id}`}>
+        {title}
+    </a>
     <div>${price}</div>
     <div>
         ⭐️ {rating.rate} ({rating.count})

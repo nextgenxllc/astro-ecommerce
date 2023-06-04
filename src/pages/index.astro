@@ -35,8 +35,9 @@ const products = await response.json();
 				this demonstrates how to use external API to get data, this is optional too. 
 				you can choose not to use it and delete this part of the code
 			-->
-			{products.map(({ image, title, price, description, rating }) => (
+			{products.map(({ image, title, price, description, rating, id }) => (
 				<ProductCard
+					id={id}
 					image={image}
 					title={title}
 					price={price}
